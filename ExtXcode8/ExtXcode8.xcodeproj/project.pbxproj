@@ -10,7 +10,36 @@
 		9067A8781D9A234600F68849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8771D9A234600F68849 /* AppDelegate.swift */; };
 		9067A87A1D9A234600F68849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9067A8791D9A234600F68849 /* Assets.xcassets */; };
 		9067A87D1D9A234700F68849 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9067A87B1D9A234700F68849 /* MainMenu.xib */; };
+		9067A88B1D9A238A00F68849 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067A88A1D9A238A00F68849 /* Cocoa.framework */; };
+		9067A8961D9A238A00F68849 /* ExtXcode.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9067A8881D9A238A00F68849 /* ExtXcode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9067A8A61D9A270F00F68849 /* extXcodeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8A51D9A270F00F68849 /* extXcodeExtention.swift */; };
+		9067A8A91D9A38AB00F68849 /* extCommentCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8A71D9A38AB00F68849 /* extCommentCommand.swift */; };
+		9067A8AA1D9A38AB00F68849 /* extDocumentCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8A81D9A38AB00F68849 /* extDocumentCommand.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9067A8941D9A238A00F68849 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9067A86C1D9A234600F68849 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9067A8871D9A238A00F68849;
+			remoteInfo = ExtXcode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9067A89A1D9A238A00F68849 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9067A8961D9A238A00F68849 /* ExtXcode.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9067A8741D9A234600F68849 /* ExtXcode8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtXcode8.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +47,13 @@
 		9067A8791D9A234600F68849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9067A87C1D9A234700F68849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9067A87E1D9A234700F68849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9067A8881D9A238A00F68849 /* ExtXcode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExtXcode.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9067A88A1D9A238A00F68849 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9067A88E1D9A238A00F68849 /* ExtXcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExtXcode.entitlements; sourceTree = "<group>"; };
+		9067A8931D9A238A00F68849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9067A8A51D9A270F00F68849 /* extXcodeExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extXcodeExtention.swift; sourceTree = "<group>"; };
+		9067A8A71D9A38AB00F68849 /* extCommentCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extCommentCommand.swift; sourceTree = "<group>"; };
+		9067A8A81D9A38AB00F68849 /* extDocumentCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extDocumentCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +64,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9067A8851D9A238A00F68849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9067A88B1D9A238A00F68849 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -35,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				9067A8761D9A234600F68849 /* ExtXcode8 */,
+				9067A88C1D9A238A00F68849 /* ExtXcode */,
+				9067A8891D9A238A00F68849 /* Frameworks */,
 				9067A8751D9A234600F68849 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				9067A8741D9A234600F68849 /* ExtXcode8.app */,
+				9067A8881D9A238A00F68849 /* ExtXcode.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +105,34 @@
 			path = ExtXcode8;
 			sourceTree = "<group>";
 		};
+		9067A8891D9A238A00F68849 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9067A88A1D9A238A00F68849 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9067A88C1D9A238A00F68849 /* ExtXcode */ = {
+			isa = PBXGroup;
+			children = (
+				9067A8A51D9A270F00F68849 /* extXcodeExtention.swift */,
+				9067A8A71D9A38AB00F68849 /* extCommentCommand.swift */,
+				9067A8A81D9A38AB00F68849 /* extDocumentCommand.swift */,
+				9067A8931D9A238A00F68849 /* Info.plist */,
+				9067A88D1D9A238A00F68849 /* Supporting Files */,
+			);
+			path = ExtXcode;
+			sourceTree = "<group>";
+		};
+		9067A88D1D9A238A00F68849 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9067A88E1D9A238A00F68849 /* ExtXcode.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,15 +143,34 @@
 				9067A8701D9A234600F68849 /* Sources */,
 				9067A8711D9A234600F68849 /* Frameworks */,
 				9067A8721D9A234600F68849 /* Resources */,
+				9067A89A1D9A238A00F68849 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9067A8951D9A238A00F68849 /* PBXTargetDependency */,
 			);
 			name = ExtXcode8;
 			productName = ExtXcode8;
 			productReference = 9067A8741D9A234600F68849 /* ExtXcode8.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9067A8871D9A238A00F68849 /* ExtXcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9067A8971D9A238A00F68849 /* Build configuration list for PBXNativeTarget "ExtXcode" */;
+			buildPhases = (
+				9067A8841D9A238A00F68849 /* Sources */,
+				9067A8851D9A238A00F68849 /* Frameworks */,
+				9067A8861D9A238A00F68849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExtXcode;
+			productName = ExtXcode;
+			productReference = 9067A8881D9A238A00F68849 /* ExtXcode.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -91,6 +185,12 @@
 					9067A8731D9A234600F68849 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X74A69AXHU;
+						ProvisioningStyle = Automatic;
+					};
+					9067A8871D9A238A00F68849 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X74A69AXHU;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -109,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				9067A8731D9A234600F68849 /* ExtXcode8 */,
+				9067A8871D9A238A00F68849 /* ExtXcode */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +224,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9067A8861D9A238A00F68849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -134,7 +242,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9067A8841D9A238A00F68849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9067A8AA1D9A38AB00F68849 /* extDocumentCommand.swift in Sources */,
+				9067A8A61D9A270F00F68849 /* extXcodeExtention.swift in Sources */,
+				9067A8A91D9A38AB00F68849 /* extCommentCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9067A8951D9A238A00F68849 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9067A8871D9A238A00F68849 /* ExtXcode */;
+			targetProxy = 9067A8941D9A238A00F68849 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9067A87B1D9A234700F68849 /* MainMenu.xib */ = {
@@ -241,7 +367,9 @@
 		9067A8821D9A234700F68849 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X74A69AXHU;
 				INFOPLIST_FILE = ExtXcode8/Info.plist;
@@ -255,13 +383,52 @@
 		9067A8831D9A234700F68849 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X74A69AXHU;
 				INFOPLIST_FILE = ExtXcode8/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = why.ExtXcode8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9067A8981D9A238A00F68849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ExtXcode/ExtXcode.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X74A69AXHU;
+				INFOPLIST_FILE = ExtXcode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = why.ExtXcode8.ExtXcode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9067A8991D9A238A00F68849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ExtXcode/ExtXcode.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X74A69AXHU;
+				INFOPLIST_FILE = ExtXcode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = why.ExtXcode8.ExtXcode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -283,6 +450,14 @@
 			buildConfigurations = (
 				9067A8821D9A234700F68849 /* Debug */,
 				9067A8831D9A234700F68849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9067A8971D9A238A00F68849 /* Build configuration list for PBXNativeTarget "ExtXcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9067A8981D9A238A00F68849 /* Debug */,
+				9067A8991D9A238A00F68849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
