@@ -16,20 +16,18 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
         var lines      = invocation.buffer.lines
         let selections = invocation.buffer.selections
 
-        guard let textRange = selections[0] as? XCSourceTextRange else {
-            return
-        }
+        for selection in selections {
 
-        if textRange.start.line != lines.count {
+            if let textRange = selection as? XCSourceTextRange, textRange.start.line != lines.count {
 
-            if textRange.start.line == textRange.end.line {
-                let lineIndex = textRange.start.line
-                let line = lines[lineIndex] as! String
-                lines.replaceObject(at: lineIndex, with: select(aLine: line))
-            }else {
-                lines = select(lines: lines, inRange: textRange.start.line...textRange.end.line)
+                if textRange.start.line == textRange.end.line {
+                    let lineIndex = textRange.start.line
+                    let line = lines[lineIndex] as! String
+                    lines.replaceObject(at: lineIndex, with: select(aLine: line))
+                }else {
+                    lines = select(lines: lines, inRange: textRange.start.line...textRange.end.line)
+                }
             }
-
         }
 
         completionHandler(nil)
