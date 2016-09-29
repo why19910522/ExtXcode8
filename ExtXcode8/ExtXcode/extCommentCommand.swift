@@ -34,6 +34,12 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
 
     }
 
+    /// 选中了多行要注释的字符串
+    ///
+    /// - parameter lines: 多行字符串范围
+    /// - parameter inRange: 要注释的字符串所在的数组
+    ///
+    /// - returns: 注释后的字符串所在的数组
     func select(lines:NSMutableArray, inRange range:ClosedRange<Int>) -> NSMutableArray {
 
         var line: String
@@ -69,6 +75,11 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
         return lines
     }
 
+    /// 选中了一行要注释的字符串
+    ///
+    /// - parameter aLine: 要注释的字符串
+    ///
+    /// - returns: 注释后的字符串
     func select(aLine string:String) -> String {
 
         var line = string

@@ -10,6 +10,9 @@ import Foundation
 
 extension String {
 
+    /// 检查是否是 OC 的方法
+    ///
+    /// - returns: 是否是 OC 的方法
     func hasMethod() -> Bool {
         let str     = replacingOccurrences(of: " ", with: "")
         let pattern = "[-,+]\\(\\S*\\)"
@@ -27,13 +30,19 @@ extension String {
         return false
     }
 
+    /// 检查是否是 OC 的属性
+    ///
+    /// - returns: 是否是 OC 的属性
     func hasProperty() -> Bool {
         return contains("@property")
     }
 
+    /// 解析 Swift 方法参数
+    ///
+    /// - returns: 参数名数组
     func parserFuncStrParameter() -> Array<String> {
 
-        var arr: Array<String> = Array()
+        var arr = [String]()
 
         let startIdx = range(of: "(")!.upperBound
         let endIdx   = range(of: ")")!.lowerBound
@@ -41,11 +50,21 @@ extension String {
         if startIdx != endIdx {
             let paramStr = substring(with: startIdx..<endIdx)
 
-            for var paramItem in paramStr.components(separatedBy: ",") {
+            for paramItem in paramStr.components(separatedBy: ",") {
 
-                paramItem     = paramItem.replacingOccurrences(of: " ", with: "")
-                var paramName = paramItem.components(separatedBy: ":").first!
-                paramName     = paramName.replacingOccurrences(of: "_", with: "")
+                var paramName  = paramItem.components(separatedBy: ":").first!.trimmingCharacters(in: .whitespacesAndNewlines)
+
+                if paramName.contains(" ") {
+                    let paramNames = paramName.components(separatedBy: " ")
+
+                    if paramNames.first!.contains("_") {
+                        paramName = paramNames.last!
+                    }else {
+                        paramName = paramNames.first!
+                    }
+
+                }
+
                 arr.append(paramName)
             }
         }
@@ -53,6 +72,9 @@ extension String {
         return arr
     }
 
+    /// 检查 Swift 是否有返回值
+    ///
+    /// - returns: Swift 是否有返回值
     func funcStrHasReturnValue() -> Bool {
 
         let tempIndex     = range(of: ")")!.lowerBound
@@ -67,10 +89,16 @@ extension String {
         }
     }
 
+    /// 检查是否是 Swift 的方法
+    ///
+    /// - returns: 是否是 Swift 的方法
     func hasFuncMethod() -> Bool {
         return contains("func ")
     }
-    
+
+    /// 检查是否是 Swift 的变量或常量
+    ///
+    /// - returns: 是否是 Swift 的变量或常量
     func hasVarOrLet() -> Bool {
         return contains("var ") || contains("let ")
     }

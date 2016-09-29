@@ -12,7 +12,6 @@ import XcodeKit
 class extDocumentCommand: NSObject, XCSourceEditorCommand {
 
     var addLineCount    = 0
-
     let spaceChar       = " "
     let fourSpaceStr    = "    "
     let threeCommentStr = "///"
@@ -80,6 +79,11 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
         completionHandler(nil)
     }
 
+    /// 插入 OC 的方法文档注释
+    ///
+    /// - parameter at: 在哪一行插入
+    /// - parameter withLine: 方法字符串
+    /// - parameter inLines: 方法字符串所在的字符串数组
     func insertMethodDoc(at index: Int, withLine line: String, inLines lines: NSMutableArray) {
 
         var insertParamDocCount = 0
@@ -147,6 +151,11 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
         addLineCount += 1
     }
 
+    /// 插入 OC 的属性文档注释
+    ///
+    /// - parameter at: 在哪一行插入
+    /// - parameter withLine: 方法字符串
+    /// - parameter inLines: 方法字符串所在的字符串数组
     func insertPropertyDoc(at index: Int, withLine line: String, inLines lines: NSMutableArray) {
 
         let docStr = threeCommentStr + spaceChar + descriptionStr
@@ -161,6 +170,11 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
 
     }
 
+    /// 插入 Swift 的方法文档注释
+    ///
+    /// - parameter at: 在哪一行插入
+    /// - parameter withLine: 方法字符串
+    /// - parameter inLines: 方法字符串所在的字符串数组
     func insertFuncDoc(at index: Int, withLine line: String, inLines lines: NSMutableArray) {
 
         var charIndex  = line.startIndex
@@ -188,7 +202,12 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
         let paramNames = line.parserFuncStrParameter()
         if paramNames.count > 0 {
 
-            for paramName in paramNames {
+            var i = paramNames.count - 1
+            var paramName: String
+
+            while i >= 0 {
+
+                paramName = paramNames[i]
 
                 if hasDoc(at: index-1, withPrefix: prefixDoc + parameterStr + paramName, inLines: lines) {
                     return
@@ -198,6 +217,7 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
 
                 lines.insert(paramDoc, at: index)
 
+                i -= 1
             }
 
             lines.insert(prefixDoc, at: index)
@@ -214,6 +234,11 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
         addLineCount += 1
     }
 
+    /// 插入  Swift 的变量或常量文档注释
+    ///
+    /// - parameter at: 在哪一行插入
+    /// - parameter withLine: 方法字符串
+    /// - parameter inLines: 方法字符串所在的字符串数组
     func insertVarOrLetDoc(at index: Int, withLine line: String, inLines lines: NSMutableArray) {
 
         var charIndex  = line.startIndex
@@ -234,6 +259,13 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
         addLineCount += 1
     }
 
+    /// 检查是否存在文档注释
+    ///
+    /// - parameter at: 在哪一行检查
+    /// - parameter withPrefix: 文档头
+    /// - parameter inLines: 字符串数组
+    ///
+    /// - returns: 是否存在文档注释
     func hasDoc(at index: Int, withPrefix prefix: String, inLines lines: NSMutableArray) -> Bool {
 
         if let line = (lines[index] as? String), line.hasPrefix(prefix) {
