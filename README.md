@@ -11,7 +11,7 @@ A Xcode Source Editor Extention for Xcode8.
 3. Build & Run the app
 4. Restart Xcode
 5. Select text
-6. Open `Editor` menu to find ExtXconde -> extDocumentation
+6. Open `Editor` menu to find `ExtXconde -> extDocumentation`
 7. You can set a shortcut (`Key-Binding`) for each extension
 
 -----
