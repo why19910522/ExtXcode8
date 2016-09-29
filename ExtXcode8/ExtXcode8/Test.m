@@ -18,15 +18,10 @@
 @implementation Test
 
 
-
-
-/// <#Description#>
-    - (void)fasf {
+- (void)fasf
+{
 
 }
-
-
-
 
 /// <#Description#>
 ///
@@ -38,8 +33,6 @@
     return 0 ;
 }
 
-
-
 /// <#Description#>
 ///
 /// @param fda <#fda description#>
@@ -47,7 +40,6 @@
 + (void)fasfs:(int  )fda dfa:(NSString    *)dfa {
                 return;
 }
-
 
 /// <#Description#>
 ///

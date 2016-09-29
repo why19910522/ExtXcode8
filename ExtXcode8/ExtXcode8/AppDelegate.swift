@@ -20,7 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //      I/nsert   code here to initialize your application
 
 
-        
+        let dd = "fasf- (void)fasf"
+        print(dd.hasMethod())
 
     }
 
@@ -42,6 +43,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
+}
+
+extension String {
+    func hasMethod() -> Bool {
+        let str     = replacingOccurrences(of: " ", with: "")
+        let pattern = "[-,+]\\(\\S*\\)"
+        let regular = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+
+        let results = regular.matches(in: str, options: .reportProgress, range: NSMakeRange(0, str.characters.count))
+
+        if results.count == 1 {
+
+            if let range = results.first?.range, range.location == 0 {
+                return true
+            }
+        }
+        
+        return false
+    }
 }
 
 

@@ -11,15 +11,15 @@ import Foundation
 extension String {
 
     func hasMethod() -> Bool {
-        let str     = replacingOccurrences(of: " ", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-        let pattern = "[-,+]\\(\\S*\\).*\\{"
+        let str     = replacingOccurrences(of: " ", with: "")
+        let pattern = "[-,+]\\(\\S*\\)"
         let regular = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
 
         let results = regular.matches(in: str, options: .reportProgress, range: NSMakeRange(0, str.characters.count))
 
         if results.count == 1 {
 
-            if let range = results.first?.range, range.location == 0, range.length == str.characters.count {
+            if let range = results.first?.range, range.location == 0 {
                 return true
             }
         }
