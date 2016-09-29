@@ -202,12 +202,7 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
         let paramNames = line.parserFuncStrParameter()
         if paramNames.count > 0 {
 
-            var i = paramNames.count - 1
-            var paramName: String
-
-            while i >= 0 {
-
-                paramName = paramNames[i]
+            for paramName in paramNames.reversed() {
 
                 if hasDoc(at: index-1, withPrefix: prefixDoc + parameterStr + paramName, inLines: lines) {
                     return
@@ -217,7 +212,6 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
 
                 lines.insert(paramDoc, at: index)
 
-                i -= 1
             }
 
             lines.insert(prefixDoc, at: index)
