@@ -10,40 +10,27 @@
 
 @interface Test ()
 
+
 /// <#Description#>
-   @property (nonatomic, strong) NSArray *arr;
+@property (nonatomic, strong) NSArray *arr;
 
 @end
 
 @implementation Test
-
 
 - (void)fasf
 {
 
 }
 
-/// <#Description#>
-///
-/// @param fda <#fda description#>
-/// @param dfa <#dfa description#>
-///
-/// @return <#return value description#>
- + ( int ) fassaffs : ( int ) fda dfa :  ( NSString * ) dfa {
++ ( int ) fassaffs : ( int ) fda dfa :  ( NSString * ) dfa {
     return 0 ;
 }
 
-/// <#Description#>
-///
-/// @param fda <#fda description#>
-/// @param dfa <#dfa description#>
 + (void)fasfs:(int  )fda dfa:(NSString    *)dfa {
                 return;
 }
 
-/// <#Description#>
-///
-/// @return <#return value description#>
 - (int)fffff {
     return 1;
 }

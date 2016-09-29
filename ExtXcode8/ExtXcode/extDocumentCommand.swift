@@ -36,26 +36,22 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
 
                     lineIndex = textRange.start.line + addLineCount
 
-                    let line          = lines[lineIndex] as! String
-                    let nextLineIndex = lineIndex + 1
-                    let nextLine      = lines[nextLineIndex] as! String
+                    var line = lines[lineIndex] as! String
+
+                    if line == "\n" {
+                        lines.removeObject(at: lineIndex)
+                    }
+
+                    line = lines[lineIndex] as! String
 
                     if line.hasVarOrLet() {
                         insertVarOrLetDoc(at: lineIndex, withLine: line, inLines: lines)
                     }else if line.hasFuncMethod() {
                         insertFuncDoc(at: lineIndex, withLine: line, inLines: lines)
-                    }else if nextLine.hasVarOrLet() {
-                        insertVarOrLetDoc(at: nextLineIndex, withLine: nextLine, inLines: lines)
-                    }else if nextLine.hasFuncMethod() {
-                        insertFuncDoc(at: nextLineIndex, withLine: nextLine, inLines: lines)
                     }else if line.hasProperty() {
                         insertPropertyDoc(at: lineIndex, withLine: line, inLines: lines)
                     }else if line.hasMethod() {
                         insertMethodDoc(at: lineIndex, withLine: line, inLines: lines)
-                    }else if nextLine.hasProperty() {
-                        insertPropertyDoc(at: nextLineIndex, withLine: nextLine, inLines: lines)
-                    }else if nextLine.hasMethod() {
-                        insertMethodDoc(at: nextLineIndex, withLine: nextLine, inLines: lines)
                     }
 
                 }else {
@@ -248,5 +244,3 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
     }
 
 }
-
-
