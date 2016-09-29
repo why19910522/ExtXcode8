@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904DAACF1D9B99AD004E3B6A /* FoundationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904DAACE1D9B99AD004E3B6A /* FoundationExt.swift */; };
 		9067A8781D9A234600F68849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8771D9A234600F68849 /* AppDelegate.swift */; };
 		9067A87A1D9A234600F68849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9067A8791D9A234600F68849 /* Assets.xcassets */; };
 		9067A87D1D9A234700F68849 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9067A87B1D9A234700F68849 /* MainMenu.xib */; };
@@ -15,6 +16,7 @@
 		9067A8A61D9A270F00F68849 /* extXcodeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8A51D9A270F00F68849 /* extXcodeExtention.swift */; };
 		9067A8A91D9A38AB00F68849 /* extCommentCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8A71D9A38AB00F68849 /* extCommentCommand.swift */; };
 		9067A8AA1D9A38AB00F68849 /* extDocumentCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067A8A81D9A38AB00F68849 /* extDocumentCommand.swift */; };
+		90862AD11D9BBEA0000D3B0A /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 90862AD01D9BBEA0000D3B0A /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		904DAACE1D9B99AD004E3B6A /* FoundationExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExt.swift; sourceTree = "<group>"; };
 		9067A8741D9A234600F68849 /* ExtXcode8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtXcode8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9067A8771D9A234600F68849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9067A8791D9A234600F68849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +57,9 @@
 		9067A8A51D9A270F00F68849 /* extXcodeExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extXcodeExtention.swift; sourceTree = "<group>"; };
 		9067A8A71D9A38AB00F68849 /* extCommentCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extCommentCommand.swift; sourceTree = "<group>"; };
 		9067A8A81D9A38AB00F68849 /* extDocumentCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extDocumentCommand.swift; sourceTree = "<group>"; };
+		90862ACE1D9BBEA0000D3B0A /* ExtXcode8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExtXcode8-Bridging-Header.h"; sourceTree = "<group>"; };
+		90862ACF1D9BBEA0000D3B0A /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		90862AD01D9BBEA0000D3B0A /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				9067A8771D9A234600F68849 /* AppDelegate.swift */,
+				90862ACF1D9BBEA0000D3B0A /* Test.h */,
+				90862AD01D9BBEA0000D3B0A /* Test.m */,
 				9067A8791D9A234600F68849 /* Assets.xcassets */,
 				9067A87B1D9A234700F68849 /* MainMenu.xib */,
 				9067A87E1D9A234700F68849 /* Info.plist */,
+				90862ACE1D9BBEA0000D3B0A /* ExtXcode8-Bridging-Header.h */,
 			);
 			path = ExtXcode8;
 			sourceTree = "<group>";
@@ -119,6 +128,7 @@
 				9067A8A51D9A270F00F68849 /* extXcodeExtention.swift */,
 				9067A8A71D9A38AB00F68849 /* extCommentCommand.swift */,
 				9067A8A81D9A38AB00F68849 /* extDocumentCommand.swift */,
+				904DAACE1D9B99AD004E3B6A /* FoundationExt.swift */,
 				9067A8931D9A238A00F68849 /* Info.plist */,
 				9067A88D1D9A238A00F68849 /* Supporting Files */,
 			);
@@ -185,6 +195,7 @@
 					9067A8731D9A234600F68849 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X74A69AXHU;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					9067A8871D9A238A00F68849 = {
@@ -239,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9067A8781D9A234600F68849 /* AppDelegate.swift in Sources */,
+				90862AD11D9BBEA0000D3B0A /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +260,7 @@
 			files = (
 				9067A8AA1D9A38AB00F68849 /* extDocumentCommand.swift in Sources */,
 				9067A8A61D9A270F00F68849 /* extXcodeExtention.swift in Sources */,
+				904DAACF1D9B99AD004E3B6A /* FoundationExt.swift in Sources */,
 				9067A8A91D9A38AB00F68849 /* extCommentCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +382,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X74A69AXHU;
@@ -376,6 +390,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = why.ExtXcode8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExtXcode8/ExtXcode8-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -385,6 +401,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X74A69AXHU;
@@ -392,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = why.ExtXcode8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExtXcode8/ExtXcode8-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -452,6 +470,7 @@
 				9067A8831D9A234700F68849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9067A8971D9A238A00F68849 /* Build configuration list for PBXNativeTarget "ExtXcode" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +479,7 @@
 				9067A8991D9A238A00F68849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

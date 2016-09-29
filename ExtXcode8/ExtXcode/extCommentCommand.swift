@@ -22,7 +22,7 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
 
                 if textRange.start.line == textRange.end.line {
                     let lineIndex = textRange.start.line
-                    let line = lines[lineIndex] as! String
+                    let line      = lines[lineIndex] as! String
                     lines.replaceObject(at: lineIndex, with: select(aLine: line))
                 }else {
                     lines = select(lines: lines, inRange: textRange.start.line...textRange.end.line)
@@ -48,15 +48,16 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
             if line.hasPrefix(doubleCommentStr) {
                 lineCount += 1
             }
-
         }
+
+        let maxCount = range.upperBound - range.lowerBound + 1
 
         for lineIndex in range.lowerBound...range.upperBound {
 
             line = lines[lineIndex] as! String
 
-            if lineCount == (range.upperBound - range.lowerBound + 1) {
-                line.replaceSubrange(doubleCommentStr.startIndex...doubleCommentStr.endIndex, with: "")
+            if lineCount == maxCount {
+                line.removeSubrange(doubleCommentStr.startIndex...doubleCommentStr.endIndex)
             }else {
                 line = doubleCommentStr + line
             }
@@ -73,14 +74,13 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
         var line = string
 
         let doubleCommentStr      = "//"
-        let doubleSpaceStr        = "  "
         let newLineStr: Character = "\n"
         let commentStr: Character = "/"
         let spaceStr: Character   = " "
         var charIndex             = line.startIndex
 
         while line[charIndex] == spaceStr {
-            charIndex = line.index(charIndex, offsetBy: 1)
+            charIndex = line.index(after: charIndex)
         }
 
         let currentChar = line[charIndex]
@@ -92,13 +92,7 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
             let nextChar = line[line.index(after: charIndex)]
 
             if currentChar == commentStr, nextChar == commentStr {
-
-                if charIndex == line.startIndex {
-                    line.replaceSubrange(doubleCommentStr.startIndex...doubleCommentStr.endIndex, with: "")
-                }else {
-                    line.replaceSubrange(charIndex...line.index(after: charIndex), with: doubleSpaceStr)
-                }
-
+                line.removeSubrange(charIndex...line.index(after: charIndex))
             }else if currentChar == commentStr, nextChar != commentStr {
 
                 if charIndex == line.startIndex {
@@ -108,14 +102,8 @@ class extCommentCommand: NSObject, XCSourceEditorCommand {
                 }
 
             }else {
-
-                if charIndex > line.index(after: line.startIndex) {
-                    line.replaceSubrange(doubleSpaceStr.startIndex...doubleSpaceStr.endIndex, with: doubleCommentStr)
-                }else {
-                    line = doubleCommentStr + line
-                }
+                line = doubleCommentStr + line
             }
-
         }
 
         return line

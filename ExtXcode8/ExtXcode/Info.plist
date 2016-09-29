@@ -42,7 +42,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>$(PRODUCT_BUNDLE_IDENTIFIER).extDocumentCommand</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>extDocument</string>
+					<string>extDocumentation</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
