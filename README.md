@@ -25,3 +25,5 @@ If you can't find the command in the `Editor` menu, please restart your computer
 
 ##Importent
 The app's development target must be the same as you computer system version.
+
+![](https://github.com/why19910522/ExtXcode8/blob/master/Snip20161011_12.png)
