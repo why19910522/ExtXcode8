@@ -19,3 +19,9 @@ You can also add all documentations with the command.
 
  1. Select all lines
  2. Open `Editor` menu to find `ExtXconde -> extDocumentation`
+
+##Prompt
+If you can't find the command in the `Editor` menu, please restart your computer and try `sudo /usr/libexec/xpccachectl` agin.
+
+##Importent
+The app's development target must be the same as you computer system version.
