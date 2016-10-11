@@ -71,8 +71,6 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
                         }
                     }
                 }
-
-                addLineCount = 0
             }
         }
 
@@ -118,6 +116,7 @@ class extDocumentCommand: NSObject, XCSourceEditorCommand {
 
             var paramName = tempStr.substring(from: endIndex).replacingOccurrences(of: ")", with: "")
             paramName     = paramName.trimmingCharacters(in: .whitespacesAndNewlines)
+            paramName     = paramName.replacingOccurrences(of: ";", with: "")
             if hasDoc(at: index-1, withPrefix: prefixParam + paramName, inLines: lines) {
                 return
             }

@@ -64,7 +64,8 @@ extension String {
                     }
 
                 }
-
+                
+                paramName = paramName.replacingOccurrences(of: ";", with: "")
                 arr.append(paramName)
             }
         }

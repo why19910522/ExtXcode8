@@ -16,6 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           
 
 
+    /// <#Description#>
+    ///
+    /// - parameter aNotification: <#aNotification description#>
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 //      I/nsert   code here to initialize your application
 
