@@ -21,9 +21,12 @@ You can also add all documentations with the command.
  2. Open `Editor` menu to find `ExtXconde -> extDocumentation`
 
 ##Prompt
-If you can't find the command in the `Editor` menu, please restart your computer and try `sudo /usr/libexec/xpccachectl` agin.
+If you can't find the command in the `Editor` menu, please restart your computer and try `sudo /usr/libexec/xpccachectl` again.
 
 ##Importent
 The app's development target must be the same as you computer system version.
 
 ![](https://github.com/why19910522/ExtXcode8/blob/master/Snip20161011_12.png)
+
+##Tips
+0. If you clean the DriveData of Xcode, please build and run the app again.
