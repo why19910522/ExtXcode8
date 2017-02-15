@@ -388,7 +388,7 @@
 				DEVELOPMENT_TEAM = X74A69AXHU;
 				INFOPLIST_FILE = ExtXcode8/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = why.ExtXcode8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ExtXcode8/ExtXcode8-Bridging-Header.h";
@@ -408,7 +408,7 @@
 				DEVELOPMENT_TEAM = X74A69AXHU;
 				INFOPLIST_FILE = ExtXcode8/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = why.ExtXcode8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ExtXcode8/ExtXcode8-Bridging-Header.h";
